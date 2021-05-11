@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Swiper from "swiper";
+import './style/App.css';
+import "swiper/swiper.min.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import StepOne from './components/stepOne';
+
+export default class Index extends Component {
+
+  componentDidMount() {
+    new Swiper('.swiper-container', {
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+  }
+
+  render() {
+    const { route } = this;
+    return (
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+
+          <div className="swiper-slide">
+
+            <StepOne />
+
+          </div>
+          
+          <div className="swiper-slide">Slide 2</div>
+          <div className="swiper-slide">Slide 3</div>
+        </div>
+        
+        <div className="swiper-pagination"></div>
+      </div>
+    );
+  }
+
 }
-
-export default App;
