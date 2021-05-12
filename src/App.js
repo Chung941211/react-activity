@@ -18,7 +18,6 @@ export default class Index extends Component {
   }
 
   render() {
-    const { route } = this;
     return (
       <div className="swiper-container">
         <div className="swiper-wrapper">
@@ -29,8 +28,8 @@ export default class Index extends Component {
 
           </div>
           
-          <div className="swiper-slide">Slide 2</div>
-          <div className="swiper-slide">Slide 3</div>
+          <div className="swiper-slide"></div>
+          <div className="swiper-slide"></div>
         </div>
         
         <div className="swiper-pagination"></div>
