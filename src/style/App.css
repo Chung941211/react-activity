@@ -3,8 +3,6 @@ html, body {
   height: 100%;
 }
 body {
-  background-image: url('../images/index.png');
-  background-size: 100% 100%;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color:#000;
@@ -14,6 +12,11 @@ body {
 .swiper-container {
   width: 100%;
   height: 100%;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 .swiper-slide {
   text-align: center;
@@ -29,4 +32,70 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+.stepOne {
+  background-image: url('../images/bg01.jpg');
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+.nav {
+  color: #ffffff;
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  z-index: 2;
+  text-align: right;
+}
+.nav-title {
+  position: relative;
+  margin-bottom: 30px;
+  background-image: url('../images/inded-nav.png');
+  background-size: 100% 100%;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  margin-left: 54px;
+}
+.nav-title span {
+  display: inline-block;
+  padding-top: 16px;
+  font-size: 11px;
+}
+.nav-word {
+  position: relative;
+  margin-bottom: 60px;
+}
+.nav-word::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f82f3f;
+  right: -30px;
+  bottom: 2px;
+}
+.nav-list {
+  padding-right: 55px;
+  font-size: 16px;
+  text-align: right;
+  position: relative;
+  cursor: pointer;
+}
+.nav-list::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 285px;
+  background-color: #ffffff;
+  opacity: 0.4;
+  right: 32px;
+  top: -30px;
+}
+.defalut-bg {
+  background-image: url('../images/bg02.jpg');
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
 }
