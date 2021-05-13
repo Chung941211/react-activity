@@ -6,6 +6,9 @@ import "swiper/swiper.min.css"
 import Nav from './components/nav';
 import StepOne from './components/stepOne';
 import StepTwo from './components/stepTwo';
+import StepImage from './components/stepImage';
+import StepFrom from './components/stepFrom';
+import StepDetail from './components/stepDetail';
 
 export default function Index() {
 
@@ -15,42 +18,22 @@ export default function Index() {
     setCount(nav)
   }
   return (
-    <div className="swiper-container">
+    <div className="container">
       <div className="swiper-wrapper">
-        {
-
-          nav === 0 &&
-          <div className="swiper-slide">
-
-            <StepOne />
-
-          </div>
-        }
+        { nav === 0 && <StepOne /> }
         
-        {
+        { nav === 1 && <StepTwo /> }
 
-          nav === 1 &&
-          <div className="swiper-slide">
+        { nav === 2 && <StepDetail /> }
 
-            <StepTwo />
+        { nav === 3 && <StepImage /> }
 
-          </div>
-        }
-
-        {
-
-          nav === 2 &&
-          <div className="swiper-slide">
-
-            <StepOne />
-
-          </div>
-        }
+        { nav === 4 && <StepFrom /> }
 
 
       </div>
       
-      <Nav handleNav={handleNav} />
+      <Nav handleNav={handleNav} nav={nav} />
       
     </div>
   );

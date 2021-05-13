@@ -9,6 +9,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.container {
+  height: 100%;
+}
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -41,21 +44,25 @@ body {
 }
 .nav {
   color: #ffffff;
-  position: absolute;
+  position: fixed;
   right: 20px;
-  top: 30%;
+  top: 20%;
   z-index: 2;
   text-align: right;
+  overflow: hidden;
 }
 .nav-title {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background-image: url('../images/inded-nav.png');
   background-size: 100% 100%;
   width: 65px;
   height: 65px;
   text-align: center;
   margin-left: 54px;
+  cursor: pointer;
+  float: right;
+  z-index: 2;
 }
 .nav-title span {
   display: inline-block;
@@ -64,7 +71,16 @@ body {
 }
 .nav-word {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 5px;
+}
+.nav-word span {
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  margin-left: 54px;
+  cursor: pointer;
+  display: inline-block;
+  padding-top: 30px;
 }
 .nav-word::before {
   content: '';
@@ -73,11 +89,11 @@ body {
   height: 15px;
   border-radius: 50%;
   background-color: #f82f3f;
-  right: -30px;
-  bottom: 2px;
+  right: -15px;
+  bottom: 30px;
 }
 .nav-list {
-  padding-right: 55px;
+  padding-right: 40px;
   font-size: 16px;
   text-align: right;
   position: relative;
@@ -87,11 +103,11 @@ body {
   content: '';
   position: absolute;
   width: 1px;
-  height: 285px;
+  height: 315px;
   background-color: #ffffff;
   opacity: 0.4;
   right: 32px;
-  top: -30px;
+  top: 64px;
 }
 .defalut-bg {
   background-image: url('../images/bg02.jpg');
@@ -109,4 +125,107 @@ body {
 .video-play {
   width: 50%;
   cursor: pointer;
+}
+.active span {
+  background-image: url('../images/nav-bg.png');
+  background-size: 100% 100%;
+  font-size: 14px;
+}
+.defalut-bg .image-rows {
+  background-image: url('../images/image-bg.png');
+  background-size: 100% 100%;
+  height: 300px;
+  transform: scale(0.8);
+}
+.defalut-bg {
+  display: flex;
+  align-items: center;
+}
+.image-bg {
+  height: 300px;
+}
+.image-wrapper {
+  width: 80%;
+  margin-left: 3%;
+}
+.defalut-bg .swiper-slide-active {
+  transform: scale(1);
+}
+.from-bg {
+  color: #ffffff;
+  background-image: url('../images/form-bg.png');
+  background-size: 100% 100%;
+  padding: 20px 30px;
+  text-align: left;
+  margin: 0 auto;
+}
+.from-title {
+  font-size: 22px;
+  position: relative;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.from-title::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  background-image: linear-gradient(to right, #e03845 , rgba(0, 0, 0, 0));
+  left: 0;
+  bottom: 0;
+}
+.from-title span {
+  position: relative;
+  z-index: 2;
+}
+.from-rows {
+  display: flex;
+  margin-bottom: 10px;
+}
+.from-content {
+  flex: 1;
+  padding-right: 10px;
+}
+.from-content input {
+  width: 100%;
+  background-color: #bdbebf;
+  border: 1px solid #fff;
+  font-size: 13px;
+  height: 25px;
+}
+.from-name {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 3px;
+  height: 19px;
+}
+.from-button {
+  width: 200px;
+  background-image: linear-gradient(to right, #b70311 , #f03f4e);
+  text-align: center;
+  margin: 0 auto;
+  padding: 6px 0;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.from-tips {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.from-tips a {
+  color: #ffffff;
+  margin-left: 3px;
+}
+.from-word {
+  margin-bottom: 20px;
+}
+.nav-back {
+  width: 60px;
+  cursor: pointer;
+}
+.stepDetail-bg {
+  width: 100%;
 }
