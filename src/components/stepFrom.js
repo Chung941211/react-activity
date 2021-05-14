@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from "react-router-dom";
 const StepFrom = props => {
 
     const [ username, setUsername ] = useState('')
@@ -75,7 +75,7 @@ const StepFrom = props => {
               <div className="from-button">立即登记</div>
               <div className="from-tips">
                     <input type="checkbox" />点击立即登记表示你已阅读并同意
-                    <a href="javascript:;">隐私政策</a>
+                    <Link to="/agreement">隐私政策</Link>
               </div>
             </div>
         </div>
