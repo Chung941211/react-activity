@@ -5,8 +5,9 @@ const StepOne = props => {
     useEffect(() => {
         new Swiper('.image-bg', {
             slidesPerView: 3,
-            spaceBetween: 5,
-            loop: true
+            spaceBetween: 15,
+            loop: true,
+            centeredSlides: true
         });
     })
     return (
@@ -15,16 +16,16 @@ const StepOne = props => {
                 <div className="swiper-container image-bg">
                     <div className="swiper-wrapper">
                         <div className="swiper-slide image-rows">
-                          <img src={require('../images/image01.jpg').default} alt="" />
+                          <div><img src={require('../images/image01.jpg').default} alt="" /></div>
                         </div>
                         <div className="swiper-slide image-rows">
-                          <img src={require('../images/image02.jpg').default} alt="" />
+                          <div><img src={require('../images/image02.jpg').default} alt="" /></div>
                         </div>
                         <div className="swiper-slide image-rows">
-                          <img src={require('../images/image03.jpg').default} alt="" />
+                          <div><img src={require('../images/image03.jpg').default} alt="" /></div>
                         </div>
                         <div className="swiper-slide image-rows">
-                          <img src={require('../images/image04.jpg').default} alt="" />
+                          <div><img src={require('../images/image04.jpg').default} alt="" /></div>
                         </div>
                     </div>
                 </div>

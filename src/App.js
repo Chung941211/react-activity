@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Swiper from "swiper";
 import './style/App.css';
 import "swiper/swiper.min.css"
 
