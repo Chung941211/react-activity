@@ -39,10 +39,16 @@ const StepOne = props => {
         <div className="defalut-bg">
             { num }
             <div className="video-bg">
-                <img
+                { play ? 
+                    <img
+                        className="video-play"
+                        src={require('../images/play2.png').default} alt="" />
+                    :
+                    <img
                     onClick={() => handlePlay()}
                     className="video-play"
                     src={require('../images/play.png').default} alt="" />
+                }
                     <video
                         className={`video-content ${play ? 'block' : ''}`}
                         ended="onEnd"

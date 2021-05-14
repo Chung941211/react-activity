@@ -139,6 +139,8 @@ body {
 .video-play {
   width: 50%;
   cursor: pointer;
+  position: relative;
+  z-index: 3;
 }
 .active span {
   background-image: url('../images/nav-bg.png');
@@ -257,13 +259,129 @@ body {
 .video-content {
   position: absolute;
   width: 45%;
-  display: none;
 }
 .block {
   display: block;
 }
+.stepOne-pbg {
+  display: none;
+  text-align: center;
+  padding-top: 80px;
+}
+.stepOne-pbg img {
+  width: 80%;
+}
+.stepOne-link {
+  display: none;
+}
+.phone-nav {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  color: #d00212;
+  z-index: 9;
+  width: 100%;
+  text-align: center;
+}
+.phone-word {
+  border: 1px solid #d00212;
+  border-radius: 16px;
+  display: inline-block;
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+.phone-active {
+  background-image: linear-gradient(to top, #b70311 , #f03f4e);
+  color: #ffffff;
+}
+.stepDetail-pbg {
+  display: none;
+  width: 100%;
+}
+.stepDetail {
+  height: 100%;
+  background-color: #03060b;
+  height: 2500px;
+}
+.stepOne-plink {
+  display: none;
+  margin: 20px 10% 0 10%;
+}
+.stepOne-plink-left {
+  width: 45%;
+}
+.stepOne-plink-right {
+  width: 40%;
+}
+.stepOne-plink-right img {
+  text-align: right;
+  width: 100%;
+}
 @media screen and (max-width: 750px) {
   .nav {
     display: none;
+  }
+  .defalut-bg {
+    display: block;
+    background-image: url('../images/phone-bg.jpg');
+  }
+  .stepOne-bg {
+    display: none;
+  }
+  .stepOne-pbg {
+    display: block;
+  }
+  .phone-nav {
+    display: block;
+  }
+  .video-bg {
+    display: block;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .video-play {
+    width: 80%;
+  }
+  .video-content {
+    width: 70%;
+    top: 150px;
+    left: 15%;
+  }
+  .stepDetail-bg {
+    display: none;
+  }
+  .stepDetail-pbg {
+    display: block;
+  }
+  .image-wrapper {
+    width: 90%;
+    left: 0;
+    margin: 150px auto 0 auto;
+  }
+  .from-bg {
+    width: 70%;
+    padding: 10px 15px;
+    margin-top: 40px;
+  }
+  .from-title {
+    font-size: 14px;
+  }
+  .from-word {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .from-button {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .from-tips {
+    font-size: 12px;
+  }
+  .stepOne-plink {
+    display: flex;
+    justify-content: space-between;
   }
 }

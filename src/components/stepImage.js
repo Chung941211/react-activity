@@ -3,9 +3,10 @@ import Swiper from "swiper"
 
 const StepOne = props => {
     useEffect(() => {
+        let clientWidth = document.body.clientWidth
         new Swiper('.image-bg', {
-            slidesPerView: 3,
-            spaceBetween: 15,
+            slidesPerView: clientWidth < 750 ? 1 : 3,
+            spaceBetween: clientWidth < 750 ? 0 : 15,
             loop: true,
             centeredSlides: true
         });
