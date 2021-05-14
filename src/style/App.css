@@ -37,10 +37,23 @@ body {
   align-items: center;
 }
 .stepOne {
-  background-image: url('../images/bg01.jpg');
+  background-image: url('../images/bg02.jpg');
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stepOne-bg {
+  text-align: center;
+  flex: 1;
+}
+.stepOne-bg img {
+  width: 70%;
+  max-width: 960px;
 }
 .nav {
   color: #ffffff;
@@ -98,6 +111,7 @@ body {
   text-align: right;
   position: relative;
   cursor: pointer;
+  z-index: 1;
 }
 .nav-list::before {
   content: '';
@@ -136,6 +150,11 @@ body {
   background-size: 100% 100%;
   height: 300px;
   transform: scale(0.8);
+  padding: 15px;
+}
+.image-rows img {
+  height: 100%;
+  width: 100%;
 }
 .defalut-bg {
   display: flex;
@@ -229,3 +248,11 @@ body {
 .stepDetail-bg {
   width: 100%;
 }
+/* @media screen and (max-width: 750px) {
+  .defalut-bg {
+    background-image: url('../images/phone-bg.png');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+  }
+} */

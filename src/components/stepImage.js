@@ -6,7 +6,6 @@ const StepOne = props => {
         new Swiper('.image-bg', {
             slidesPerView: 3,
             spaceBetween: 5,
-            centeredSlides: true,
             loop: true
         });
     })
@@ -15,9 +14,18 @@ const StepOne = props => {
             <div className="image-wrapper">
                 <div className="swiper-container image-bg">
                     <div className="swiper-wrapper">
-                        <div className="swiper-slide image-rows"></div>
-                        <div className="swiper-slide image-rows"></div>
-                        <div className="swiper-slide image-rows"></div>
+                        <div className="swiper-slide image-rows">
+                          <img src={require('../images/image01.jpg').default} alt="" />
+                        </div>
+                        <div className="swiper-slide image-rows">
+                          <img src={require('../images/image02.jpg').default} alt="" />
+                        </div>
+                        <div className="swiper-slide image-rows">
+                          <img src={require('../images/image03.jpg').default} alt="" />
+                        </div>
+                        <div className="swiper-slide image-rows">
+                          <img src={require('../images/image04.jpg').default} alt="" />
+                        </div>
                     </div>
                 </div>
             </div>

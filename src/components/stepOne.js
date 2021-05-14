@@ -3,8 +3,9 @@ import React from 'react';
 const StepOne = props => {
 
     return (
-        <div className="stepOne">
-            <div className="stepOne-logo">
+        <div className="defalut-bg">
+            <div className="stepOne-bg">
+                <img src={require('../images/car.png').default} alt="" />
             </div>
         </div>
     )
