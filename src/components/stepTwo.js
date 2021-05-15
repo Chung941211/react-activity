@@ -17,6 +17,8 @@ const StepOne = props => {
     }
 
     useEffect(() => {
+        setPlay(true)
+        videoEl.current.play()
         videoEl.current.addEventListener('ended', () => {
             const count = num + 1
             setNum(count)
@@ -34,7 +36,7 @@ const StepOne = props => {
                 setNum(1)
             }
         })
-    })
+    }, [num])
     return (
         <div className="defalut-bg">
             { num }

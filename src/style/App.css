@@ -259,6 +259,7 @@ body {
 .video-content {
   position: absolute;
   width: 45%;
+  z-index: 3;
 }
 .block {
   display: block;
@@ -311,7 +312,8 @@ body {
   margin: 20px 10% 0 10%;
 }
 .stepOne-plink-left {
-  width: 45%;
+  width: 130px;
+  height: 50px;
 }
 .stepOne-plink-right {
   width: 40%;
@@ -321,6 +323,9 @@ body {
   width: 100%;
 }
 @media screen and (max-width: 750px) {
+  body {
+    background-color: #0c1015;
+  }
   .nav {
     display: none;
   }
@@ -340,10 +345,10 @@ body {
   .video-bg {
     display: block;
     text-align: center;
-    padding-top: 100px;
   }
   .video-play {
     width: 80%;
+    margin-top: 100px;
   }
   .video-content {
     width: 70%;
@@ -364,7 +369,7 @@ body {
   .from-bg {
     width: 70%;
     padding: 10px 15px;
-    margin-top: 40px;
+    margin-top: 70px;
   }
   .from-title {
     font-size: 14px;
@@ -383,5 +388,13 @@ body {
   .stepOne-plink {
     display: flex;
     justify-content: space-between;
+  }
+  .from {
+    position: relative;
+    height: 720px;
+  }
+  .from .phone-nav {
+    position: absolute;
+    bottom: 0;
   }
 }

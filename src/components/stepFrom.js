@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { saveData } from "../api/axios";
 const StepFrom = props => {
 
     const [ username, setUsername ] = useState('')
@@ -7,7 +8,9 @@ const StepFrom = props => {
     const [ province, setProvince ] = useState('')
     const [ city, setCity ] = useState('')
     const [ company, setCompany ] = useState('')
-
+    // saveData().then(res => {
+    //     console.log('11')
+    // })
     return (
         <div className="defalut-bg">
             <div className="from-bg">

@@ -28,7 +28,7 @@ function Index() {
   }
 
   return (
-    <div className="container">
+    <div className={`container ${nav === 4 ? 'from' : ''}`}>
       <div className="swiper-wrapper">
         { nav === 0 && <StepOne /> }
         
@@ -39,7 +39,6 @@ function Index() {
         { nav === 3 && <StepImage /> }
 
         { nav === 4 && <StepFrom /> }
-
 
       </div>
       
