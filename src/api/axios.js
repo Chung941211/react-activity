@@ -1,11 +1,7 @@
 import axios from "axios";
 
-export const baseUrl = "http://localhost:3300";
-
 // axios的实例及拦截器配置
-const axiosInstance = axios.create({
-  baseURL: baseUrl
-});
+const axiosInstance = axios.create();
 
 axiosInstance.interceptors.response.use(
   res => res.data,
@@ -14,6 +10,10 @@ axiosInstance.interceptors.response.use(
   }
 );
 
-export const saveData = () => {
-  return axiosInstance.get("/banner");
+export const saveData = (data) => {
+  return axiosInstance.get("/add.php", {
+    params: {
+      ...data
+    }
+  });
 };

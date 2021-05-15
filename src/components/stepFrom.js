@@ -8,9 +8,17 @@ const StepFrom = props => {
     const [ province, setProvince ] = useState('')
     const [ city, setCity ] = useState('')
     const [ company, setCompany ] = useState('')
-    // saveData().then(res => {
-    //     console.log('11')
-    // })
+    const handleSave = () => {
+        saveData({
+            name: username,
+            province,
+            phone,
+            city,
+            companyname: company
+        }).then(res => {
+            alert("登记成功")
+        })
+    }
     return (
         <div className="defalut-bg">
             <div className="from-bg">
@@ -75,7 +83,9 @@ const StepFrom = props => {
                 </div>
               </div>
 
-              <div className="from-button">立即登记</div>
+              <div
+                onClick={() => handleSave()}
+                className="from-button">立即登记</div>
               <div className="from-tips">
                     <input type="checkbox" />点击立即登记表示你已阅读并同意
                     <Link to="/agreement">隐私政策</Link>
