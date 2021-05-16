@@ -1,16 +1,30 @@
-import React,  { useEffect } from 'react';
+import React,  { useEffect, useState } from 'react';
 import Swiper from "swiper"
+import "swiper/swiper.min.css"
 
 const StepOne = props => {
+    const [obj, setObj] = useState(null)
     useEffect(() => {
         let clientWidth = document.body.clientWidth
-        new Swiper('.image-bg', {
+        let swiper = new Swiper('.image-bg', {
             slidesPerView: clientWidth < 750 ? 1 : 3,
             spaceBetween: clientWidth < 750 ? 0 : 15,
             loop: true,
-            centeredSlides: true
+            centeredSlides: true,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }
         });
-    })
+        setObj(swiper)
+    }, [])
+
+    function handlePrev() {
+      obj.slidePrev()
+    }
+    function handleNext() {
+      obj.slideNext();
+    }
     return (
         <div className="defalut-bg">
             <div className="image-wrapper">
@@ -28,6 +42,14 @@ const StepOne = props => {
                         <div className="swiper-slide image-rows">
                           <div><img src={require('../images/image04.jpg').default} alt="" /></div>
                         </div>
+                    </div>
+                    <div className="swiper-flex">
+                      <div
+                        onClick={() => handlePrev()}
+                        className="swiper-button-prev"></div>
+                      <div
+                        onClick={() => handleNext()}
+                        className="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
