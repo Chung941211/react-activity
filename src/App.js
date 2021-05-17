@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,17 +19,17 @@ import Agreement from './components/agreement';
 
 function Index() {
 
-    // let match = useRouteMatch();
-    console.log(useRouteMatch())
   const [nav, setCount] = useState(0)
 
   const handleNav = (nav) => {
     setCount(nav)
+    document.documentElement.scrollTop = 0
   }
 
   return (
-    <div className={`container ${nav === 4 ? 'from' : ''}`}>
+    <div className={`container from`}>
       <div className="swiper-wrapper">
+        { nav }
         { nav === 0 && <StepOne /> }
         
         { nav === 1 && <StepTwo /> }

@@ -21,6 +21,9 @@ body {
     width: 100%;
     height: 100%;
 }
+.agreement {
+  color: #ffffff;
+}
 /* .swiper-slide {
   text-align: center;
   display: -webkit-box;
@@ -440,5 +443,8 @@ body {
   .from .phone-nav {
     position: absolute;
     bottom: 0;
+  }
+  .stepOne-ph {
+    padding-bottom: 30px;
   }
 }
