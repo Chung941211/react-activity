@@ -43,15 +43,15 @@ const StepOne = props => {
                           <div><img src={require('../images/image04.jpg').default} alt="" /></div>
                         </div>
                     </div>
-                    <div className="swiper-flex">
-                      <div
-                        onClick={() => handlePrev()}
-                        className="swiper-button-prev"></div>
-                      <div
-                        onClick={() => handleNext()}
-                        className="swiper-button-next"></div>
-                    </div>
                 </div>
+            </div>
+            <div className="swiper-flex">
+              <div
+                onClick={() => handlePrev()}
+                className="swiper-button-prev"></div>
+              <div
+                onClick={() => handleNext()}
+                className="swiper-button-next"></div>
             </div>
         </div>
     )

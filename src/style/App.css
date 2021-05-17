@@ -128,6 +128,7 @@ body {
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .video-bg {
   height: 100%;
@@ -259,10 +260,10 @@ body {
 .video-content {
   position: absolute;
   width: 45%;
-  z-index: 3;
 }
 .block {
   display: block;
+  z-index: 4;
 }
 .stepOne-pbg {
   display: none;
@@ -327,10 +328,15 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+  position: absolute;
+  width: 95%;
+  left: 2.5%;
+  z-index: 999;
+  top: 50%;
 }
 .swiper-button-next, .swiper-button-prev {
   color: #d00212;
-  font-size: 24px;
+  font-size: 28px;
 }
 .swiper-button-next:after {
   content: 'next';
@@ -354,15 +360,14 @@ body {
   body {
     background-color: #0c1015;
   }
+  .defalut-bg {
+    background-image: none;
+  }
   .swiper-flex {
     display: flex;
   }
   .nav {
     display: none;
-  }
-  .defalut-bg {
-    display: block;
-    background-image: url('../images/phone-bg.jpg');
   }
   .stepOne-bg {
     display: none;
@@ -376,14 +381,15 @@ body {
   .video-bg {
     display: block;
     text-align: center;
+    position: relative;
   }
   .video-play {
     width: 80%;
-    margin-top: 100px;
+    margin-top: 10%;
   }
   .video-content {
     width: 70%;
-    top: 150px;
+    top: 27%;
     left: 15%;
   }
   .stepDetail {
@@ -405,7 +411,8 @@ body {
   .image-wrapper {
     width: 85%;
     left: 0;
-    margin: 150px auto 0 auto;
+    margin: 10% auto 0 auto;
+    position: relative;
   }
   .from-bg {
     width: 70%;
@@ -436,9 +443,5 @@ body {
   }
   .from-content input {
     width: 90%;
-  }
-  .from .phone-nav {
-    position: absolute;
-    bottom: 0;
   }
 }

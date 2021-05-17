@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 
 import './style/App.css';
+import './style/phone.css';
 import "swiper/swiper.min.css"
 
-import Nav from './components/nav';
 import StepOne from './components/stepOne';
 import StepTwo from './components/stepTwo';
 import StepImage from './components/stepImage';
@@ -19,30 +19,51 @@ import Agreement from './components/agreement';
 
 function Index() {
 
-    // let match = useRouteMatch();
-    console.log(useRouteMatch())
+
   const [nav, setCount] = useState(0)
+  const [width, setWidth] = useState(document.body.clientWidth)
 
   const handleNav = (nav) => {
     setCount(nav)
   }
 
   return (
-    <div className={`container ${nav === 4 ? 'from' : ''}`}>
-      <div className="swiper-wrapper">
-        { nav === 0 && <StepOne /> }
-        
-        { nav === 1 && <StepTwo /> }
+    <div className={`container`}>
 
-        { nav === 2 && <StepDetail /> }
+      { 
+        width > 750 ? 
 
-        { nav === 3 && <StepImage /> }
+        <div className="swiper-wrapper">
+          { nav === 0 && <StepOne /> }
+          
+          { nav === 1 && <StepTwo /> }
 
-        { nav === 4 && <StepFrom /> }
+          { nav === 2 && <StepDetail /> }
 
-      </div>
+          { nav === 3 && <StepImage /> }
+
+          { nav === 4 && <StepFrom /> }
+
+        </div>
+
+        : 
+
+        <div className="phone-wrapper">
+          <img
+              className="phone-bg"
+              src={require('./images/pimg/p01.jpg').default} alt="" />
+          <StepTwo />
+          <img
+              className="phone-bg"
+              src={require('./images/pimg/p02.jpg').default} alt="" />
+          <StepImage />
+          <StepFrom />
+          <img
+              className="phone-bg"
+              src={require('./images/pimg/pbottom.jpg').default} alt="" />
+        </div>
+      }
       
-      <Nav handleNav={handleNav} nav={nav} />
       
     </div>
   );
