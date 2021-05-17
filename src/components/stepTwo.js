@@ -17,8 +17,8 @@ const StepOne = props => {
     }
 
     useEffect(() => {
-        setPlay(true)
-        videoEl.current.play()
+        // setPlay(true)
+        // videoEl.current.play()
         videoEl.current.addEventListener('ended', () => {
             const count = num + 1
             setNum(count)
