@@ -49,6 +49,10 @@ function Index() {
         : 
 
         <div className="phone-wrapper">
+          <a  className="phone-live"
+              href="https://wx.vzan.com/live/tvchat-100882512?v=1620465354501">
+              <img src={require('./images/pimg/live.png').default} alt="" />
+          </a>
           <img
               className="phone-bg"
               src={require('./images/pimg/p01.jpg').default} alt="" />

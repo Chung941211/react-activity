@@ -9,6 +9,18 @@ const StepFrom = props => {
     const [ city, setCity ] = useState('')
     const [ company, setCompany ] = useState('')
     const handleSave = () => {
+        if (username === '') {
+            return alert('姓名不能为空')
+        }
+        if (province === '') {
+            return alert('地区不能为空')
+        }
+        if (phone === '') {
+            return alert('手机不能为空')
+        }
+        if (city === '') {
+            return alert('所属市不能为空')
+        }
         saveData({
             name: username,
             province,

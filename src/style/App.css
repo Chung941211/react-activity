@@ -144,7 +144,7 @@ body {
   width: 50%;
   cursor: pointer;
   position: relative;
-  z-index: 3;
+  /* z-index: 3; */
 }
 .active span {
   background-image: url('../images/nav-bg.png');
@@ -358,6 +358,15 @@ body {
 }
 .swiper-flex {
   display: none;
+}
+.phone-live {
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 35%;
+}
+.phone-live img {
+  width: 100%;
 }
 @media screen and (max-width: 750px) {
   body {
