@@ -2,25 +2,33 @@ import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  useRouteMatch
+  Route
 } from "react-router-dom";
 
 import './style/App.css';
 import './style/phone.css';
 import "swiper/swiper.min.css"
-
-import StepOne from './components/stepOne';
+import Swiper from "swiper"
 import StepTwo from './components/stepTwo';
 import StepImage from './components/stepImage';
 import StepFrom from './components/stepFrom';
-import StepDetail from './components/stepDetail';
 import Agreement from './components/agreement';
 
 function Index() {
 
   const [nav, setCount] = useState(0)
   const [width, setWidth] = useState(document.body.clientWidth)
+
+  useEffect(() => {
+      new Swiper('.swiper-index', {
+        direction: 'vertical',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+  
+  }, [])
 
   const handleNav = (nav) => {
     setCount(nav)
@@ -32,18 +40,46 @@ function Index() {
 
       { 
         width > 750 ? 
+        <div className="swiper-container swiper-index">
+          <div className="swiper-wrapper">
 
-        <div className="swiper-wrapper">
-          { nav === 0 && <StepOne /> }
-          
-          { nav === 1 && <StepTwo /> }
+            <div className="swiper-slide">
+              <img
+                className="mac-bg"
+                src={require('./images/index/bg01.png').default} alt="" />
+            </div>
+            <div className="swiper-slide">
+              <img
+                className="mac-bg"
+                src={require('./images/index/bg02.png').default} alt="" />
+            </div>
+            <div className="swiper-slide">
+              <img
+                className="mac-bg"
+                src={require('./images/index/bg03.png').default} alt="" />
+            </div>
+            <div className="swiper-slide">
+              <img
+                className="mac-bg"
+                src={require('./images/index/bg04.png').default} alt="" />
+            </div>
+            <div className="swiper-slide">
+              <img
+                className="mac-bg"
+                src={require('./images/index/bg05.png').default} alt="" />
+            </div>
 
-          { nav === 2 && <StepDetail /> }
+            {/* { nav === 0 && <StepOne /> }
+            
+            { nav === 1 && <StepTwo /> }
 
-          { nav === 3 && <StepImage /> }
+            { nav === 2 && <StepDetail /> }
 
-          { nav === 4 && <StepFrom /> }
+            { nav === 3 && <StepImage /> }
 
+            { nav === 4 && <StepFrom /> } */}
+
+          </div>
         </div>
 
         : 
