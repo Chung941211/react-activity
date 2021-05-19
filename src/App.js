@@ -7,7 +7,7 @@ import {
 
 import './style/App.css';
 import './style/phone.css';
-import "swiper/swiper.min.css"
+import './style/swiper.css'
 import Swiper from "swiper"
 import StepTwo from './components/stepTwo';
 import StepImage from './components/stepImage';
@@ -16,16 +16,19 @@ import Agreement from './components/agreement';
 
 function Index() {
 
-  const [nav, setCount] = useState(0)
+  const [nav, setCount] = useState(1)
   const [width, setWidth] = useState(document.body.clientWidth)
 
   useEffect(() => {
-      new Swiper('.swiper-index', {
+      let swiper = new Swiper('.swiper-index', {
         direction: 'vertical',
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+        on: {
+          slideChangeTransitionEnd: () => {
+            console.log(swiper)
+            setCount(swiper.realIndex + 1)
+          }
         },
+        mousewheel: true
       });
   
   }, [])
@@ -49,6 +52,9 @@ function Index() {
                 src={require('./images/index/bg01.png').default} alt="" />
             </div>
             <div className="swiper-slide">
+              <StepTwo />
+            </div>
+            <div className="swiper-slide">
               <img
                 className="mac-bg"
                 src={require('./images/index/bg02.png').default} alt="" />
@@ -68,18 +74,19 @@ function Index() {
                 className="mac-bg"
                 src={require('./images/index/bg05.png').default} alt="" />
             </div>
-
-            {/* { nav === 0 && <StepOne /> }
-            
-            { nav === 1 && <StepTwo /> }
-
-            { nav === 2 && <StepDetail /> }
-
-            { nav === 3 && <StepImage /> }
-
-            { nav === 4 && <StepFrom /> } */}
+            <div className="swiper-slide">
+              <StepImage />
+            </div>
+            <div className="swiper-slide">
+              <StepFrom />
+              <img
+                className="phone-bg"
+                src={require('./images/pimg/pbottom.jpg').default} alt="" />
+            </div>
 
           </div>
+          <div className="pagination" />
+          <div className="pagination-active" style={{height: (nav / 8 * 100) + '%'}} />
         </div>
 
         : 

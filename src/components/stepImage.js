@@ -1,6 +1,6 @@
 import React,  { useEffect, useState } from 'react';
 import Swiper from "swiper"
-import "swiper/swiper.min.css"
+import '../style/swiper.css'
 
 const StepOne = props => {
     const [obj, setObj] = useState(null)
@@ -10,11 +10,7 @@ const StepOne = props => {
             slidesPerView: clientWidth < 750 ? 1 : 3,
             spaceBetween: clientWidth < 750 ? 0 : 15,
             loop: true,
-            centeredSlides: true,
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            }
+            centeredSlides: true
         });
         setObj(swiper)
     }, [])
