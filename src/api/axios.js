@@ -17,3 +17,19 @@ export const saveData = (data) => {
     }
   });
 };
+
+export const getData = (data) => {
+  return axiosInstance.get("/chaxun.php", {
+    params: {
+      ...data
+    }
+  });
+};
+
+export const ylcount = (data) => {
+  return axiosInstance.get("/ylcount.php", {
+    params: {
+      ...data
+    }
+  });
+};

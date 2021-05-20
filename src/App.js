@@ -13,6 +13,8 @@ import StepTwo from './components/stepTwo';
 import StepImage from './components/stepImage';
 import StepFrom from './components/stepFrom';
 import Agreement from './components/agreement';
+import Check from './components/check';
+import { ylcount } from "./api/axios";
 
 function Index() {
 
@@ -20,6 +22,7 @@ function Index() {
   const [width, setWidth] = useState(document.body.clientWidth)
 
   useEffect(() => {
+    ylcount()
       let swiper = new Swiper('.swiper-index', {
         direction: 'vertical',
         on: {
@@ -127,6 +130,9 @@ export default function App() {
         </Route>
         <Route path="/agreement">
           <Agreement />
+        </Route>
+        <Route path="/check">
+          <Check />
         </Route>
       </Switch>
     </Router>
